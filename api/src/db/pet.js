@@ -22,6 +22,14 @@ const createPetModel = db => {
         .write()
 
       return newPet
+    },
+
+    delete(filter){
+      
+      db.get('pet')
+        .find(filter)
+        .delete(filter)
+        
     }
   }
 }
